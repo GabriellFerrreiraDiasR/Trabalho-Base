@@ -1,164 +1,93 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <title>Conteúdos</title>
-  <link rel="stylesheet" href="../css/style.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Conteúdos</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
 
-<body>
+  <body>
+    <header>Conteúdos de Estudo</header>
 
-<header>Conteúdos de Estudo</header>
+    <nav class="menu">
+      <ul>
+        <li><a href="../index.html">Início</a></li>
 
-<nav class="menu">
-  <ul>
-    <li><a href="../index.html">Início</a></li>
-    <li><a href="servicos.html">Conteúdos</a></li>
-    <li><a href="contato.html">Cadastro</a></li>
-  </ul>
-</nav>
+        <li><a href="sobre.html">Sobre</a></li>
 
-<main>
+        <li class="dropdown">
+          <a href="#">Conteúdos ▾</a>
 
-<section id="html">
-  <article>
-    <h2>HTML</h2>
-    <p>Estrutura de páginas web usando elementos semânticos.</p>
-    
-    <h3>O que é?</h3>
-    <p>HTML (HyperText Markup Language) é a linguagem de marcação que cria a estrutura das páginas web. Criada por Tim Berners-Lee em 1991.</p>
-    <p><strong>Analogia:</strong> É o esqueleto da casa - define onde ficam paredes, portas e cômodos.</p>
-    
-    <h3>Elementos principais</h3>
-    <ul>
-      <li><strong>Estruturais:</strong> header, nav, main, section, article, footer</li>
-      <li><strong>Texto:</strong> h1 a h6, p, span, div, strong, em</li>
-      <li><strong>Listas:</strong> ul (não ordenada), ol (ordenada)</li>
-      <li><strong>Tabelas:</strong> table, tr, td, th</li>
-      <li><strong>Formulários:</strong> form, input, select, textarea, button</li>
-      <li><strong>Multimídia:</strong> img, audio, video, canvas</li>
-    </ul>
-    
-    <h3>Exemplo básico</h3>
-    <pre>
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;title&gt;Meu Site&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;h1&gt;Olá Mundo!&lt;/h1&gt;
-    &lt;p&gt;Meu primeiro parágrafo.&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
-    
-    <p><strong>Dica:</strong> Use tags semânticas para melhorar o SEO e a acessibilidade.</p>
-  </article>
-</section>
+          <ul class="submenu">
+            <li><a href="#html">HTML</a></li>
+            <li><a href="#css">CSS</a></li>
+            <li><a href="#js">JavaScript</a></li>
+          </ul>
+        </li>
 
-<section id="css">
-  <article>
-    <h2>CSS</h2>
-    <p>Estilização, cores e layouts responsivos com Grid.</p>
-    
-    <h3>O que é?</h3>
-    <p>CSS (Cascading Style Sheets) é a linguagem de estilo que define a aparência visual das páginas. Oficial desde 1996.</p>
-    <p><strong>Analogia:</strong> É a decoração da casa - define cores, fontes, tamanhos e posicionamento.</p>
-    
-    <h3>Principais conceitos</h3>
-    <ul>
-      <li><strong>Sintaxe:</strong> seletor { propriedade: valor; }</li>
-      <li><strong>Box Model:</strong> margin, border, padding, content</li>
-      <li><strong>Display:</strong> block, inline, flex, grid</li>
-      <li><strong>Posicionamento:</strong> static, relative, absolute, fixed, sticky</li>
-      <li><strong>Cores:</strong> nome, hexadecimal, rgb(), hsl()</li>
-      <li><strong>Unidades:</strong> px, %, rem, em, vw, vh</li>
-    </ul>
-    
-    <h3>Exemplo básico</h3>
-    <pre>
-/* Seletor por classe */
-.minha-classe {
-    color: blue;
-    font-size: 20px;
-    background: #f0f0f0;
-    padding: 10px;
-    border-radius: 5px;
-}</pre>
-    
-    <h3>Flexbox (mais usado)</h3>
-    <pre>
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}</pre>
-    
-    <h3>Grid (layout em grade)</h3>
-    <pre>
-.grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-}</pre>
-    
-    <p><strong>Dica:</strong> Use sempre box-sizing: border-box no início do seu CSS.</p>
-  </article>
-</section>
+        <li><a href="contato.html">Cadastro</a></li>
+      </ul>
+    </nav>
 
-<section id="js">
-  <article>
-    <h2>JavaScript</h2>
-    <p>Interatividade e lógica para páginas web.</p>
-    
-    <h3>O que é?</h3>
-    <p>JavaScript é uma linguagem de programação que torna as páginas interativas. Criada por Brendan Eich em 1995.</p>
-    <p><strong>Analogia:</strong> É a eletricidade da casa - permite portas abrirem, luzes acenderem, coisas se moverem.</p>
-    
-    <h3>Conceitos fundamentais</h3>
-    <ul>
-      <li><strong>Variáveis:</strong> let (muda), const (não muda)</li>
-      <li><strong>Tipos:</strong> String, Number, Boolean, Array, Object</li>
-      <li><strong>Funções:</strong> function nome() { } ou () => { }</li>
-      <li><strong>Condicionais:</strong> if, else, switch</li>
-      <li><strong>Loops:</strong> for, while</li>
-      <li><strong>Eventos:</strong> click, mouseover, keydown, submit</li>
-    </ul>
-    
-    <h3>Exemplo básico</h3>
-    <pre>
-// Pegar elementos
-const botao = document.getElementById("meuBotao");
-const texto = document.querySelector(".mensagem");
+    <main>
+      <section id="html">
+        <article>
+          <h2>HTML</h2>
 
-// Adicionar evento
-botao.addEventListener("click", () => {
-    texto.textContent = "Clicou!";
-    texto.style.color = "red";
-});</pre>
-    
-    <h3>Manipulação do DOM (essencial)</h3>
-    <pre>
-// Selecionar
-document.getElementById("id")
-document.querySelector(".classe")
+          <p>HTML é responsável pela estrutura das páginas.</p>
 
-// Modificar
-elemento.textContent = "Novo texto"
-elemento.innerHTML = "&lt;strong&gt;HTML&lt;/strong&gt;"
-elemento.style.color = "blue"
-elemento.classList.add("ativo")</pre>
-    
-    <p><strong>Dica:</strong> Use const por padrão. Só use let se precisar mudar o valor depois.</p>
-  </article>
-</section>
+          <h3>Exemplo:</h3>
 
-</main>
+          <pre>
+&lt;h1&gt;Título&lt;/h1&gt;
+&lt;p&gt;Parágrafo&lt;/p&gt;
+</pre
+          >
+        </article>
+      </section>
 
-<footer>
-  <p>Desenvolvido por Você - 2026</p>
-</footer>
+      <section id="css">
+        <article>
+          <h2>CSS</h2>
 
-</body>
+          <p>CSS define aparência e layout.</p>
+
+          <h3>Exemplo:</h3>
+
+          <pre>
+body{
+background:black;
+color:white;
+}
+</pre
+          >
+        </article>
+      </section>
+
+      <section id="js">
+        <article>
+          <h2>JavaScript</h2>
+
+          <p>JavaScript adiciona interatividade.</p>
+
+          <h3>Exemplo:</h3>
+
+          <pre>
+alert("Olá Mundo")
+</pre
+          >
+        </article>
+      </section>
+    </main>
+
+    <aside>
+      <h3>Dica</h3>
+
+      <p>Aprenda uma tecnologia por vez.</p>
+    </aside>
+
+    <footer>
+      <p>Desenvolvido por Você - 2026</p>
+    </footer>
+  </body>
 </html>

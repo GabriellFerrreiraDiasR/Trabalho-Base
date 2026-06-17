@@ -1,36 +1,39 @@
 function mostrarDados() {
+  let nome = document.getElementById("nome").value;
+  let email = document.getElementById("email").value;
+  let idade = document.getElementById("idade").value;
+  let nascimento = document.getElementById("nascimento").value;
+  let genero = document.getElementById("genero").value;
 
-    let nome = document.getElementById("nome").value;
-    let email = document.getElementById("email").value;
-    let idade = document.getElementById("idade").value;
-    let genero = document.getElementById("genero").value;
-    let nascimento = document.getElementById("nascimento").value;
+  let dataFormatada = nascimento
+    ? new Date(nascimento).toLocaleDateString("pt-BR")
+    : "";
 
-    let dataFormatada = nascimento
-        ? new Date(nascimento).toLocaleDateString("pt-BR")
-        : "";
+  document.getElementById("saida").innerHTML = `
 
-    document.getElementById("saida").innerHTML = `
-        <h2>Dados Informados</h2>
+<h3>Dados enviados</h3>
 
-        Nome: ${nome}<br>
-        Email: ${email}<br>
-        Idade: ${idade}<br>
-        Nascimento: ${dataFormatada}<br>
-        Gênero: ${genero}
-    `;
+<p><strong>Nome:</strong> ${nome}</p>
+
+<p><strong>Email:</strong> ${email}</p>
+
+<p><strong>Idade:</strong> ${idade}</p>
+
+<p><strong>Data de nascimento:</strong> ${dataFormatada}</p>
+
+<p><strong>Gênero:</strong> ${genero}</p>
+
+`;
 }
 
 function limparDados() {
+  document.getElementById("nome").value = "";
+  document.getElementById("email").value = "";
+  document.getElementById("idade").value = "";
+  document.getElementById("nascimento").value = "";
+  document.getElementById("genero").value = "";
 
-    document.getElementById("nome").value = "";
-    document.getElementById("email").value = "";
-    document.getElementById("idade").value = "";
-    document.getElementById("nascimento").value = "";
-    document.getElementById("genero").value = "";
-
-    document.getElementById("saida").innerHTML = `
-        <h2>Dados Informados</h2>
-        <p>Os dados preenchidos aparecerão aqui.</p>
-    `;
+  document.getElementById("saida").innerHTML = `
+<p>Os dados aparecerão aqui.</p>
+`;
 }

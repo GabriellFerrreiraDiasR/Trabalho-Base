@@ -1,9 +1,24 @@
-body {
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+* {
   margin: 0;
-  font-family: Arial, sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
 
   display: grid;
-  grid-template-columns: 240px 1fr 220px;
+
+  grid-template-columns: 220px 1fr 220px;
+
+  /* Faz nav, main e aside ocuparem a área corretamente */
+
+  grid-template-rows: auto 1fr auto;
+
   grid-template-areas:
     "header header header"
     "nav main aside"
@@ -12,125 +27,335 @@ body {
   min-height: 100vh;
 
   background: #0f172a;
+
   color: #e2e8f0;
 }
 
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
+
 header {
   grid-area: header;
-  background: linear-gradient(90deg, #2563eb, #06b6d4);
-  padding: 20px;
-  text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 90px;
+
+  font-size: 28px;
   font-weight: bold;
+
+  text-align: center;
+
+  background: linear-gradient(135deg, #4f46e5, #2563eb);
+
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* NAV */
+/* =========================
+   NAVBAR
+========================= */
+
 nav {
   grid-area: nav;
+
   background: #111827;
+
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+
+  min-height: 100%;
 }
 
 .menu ul {
   list-style: none;
-  margin: 0;
-  padding: 0;
+}
+
+.menu li {
+  position: relative;
 }
 
 .menu a {
   display: block;
-  padding: 14px;
-  color: white;
+
+  padding: 15px;
+
+  color: #cbd5e1;
+
   text-decoration: none;
+
+  transition: 0.3s;
 }
 
 .menu a:hover {
   background: #2563eb;
+
+  color: white;
 }
 
-/* DROPDOWN FIX */
-.dropdown {
-  position: relative;
-}
+/* =========================
+   DROPDOWN
+========================= */
 
 .submenu {
   display: none;
+
   position: absolute;
-  left: 100%;
+
   top: 0;
-  background: #0b1220;
-  min-width: 160px;
+
+  left: 100%;
+
+  min-width: 180px;
+
+  background: #1e293b;
+
+  border-radius: 0 10px 10px 0;
+
+  overflow: hidden;
+
+  z-index: 1000;
 }
 
 .dropdown:hover .submenu {
   display: block;
 }
 
-/* MAIN */
+.submenu a {
+  padding: 14px;
+}
+
+/* =========================
+   MAIN
+========================= */
+
 main {
   grid-area: main;
-  padding: 20px;
+
+  margin: 20px;
+
+  padding: 25px;
+
+  background: #1e293b;
+
+  border-radius: 15px;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* ASIDE */
+/* =========================
+   SECTIONS E ARTICLES
+========================= */
+
+section {
+  margin-bottom: 30px;
+}
+
+article {
+  margin-top: 15px;
+
+  padding: 20px;
+
+  background: #111827;
+
+  border-radius: 10px;
+}
+
+/* =========================
+   TEXTOS
+========================= */
+
+h2 {
+  margin-bottom: 15px;
+}
+
+h3 {
+  margin-top: 15px;
+
+  margin-bottom: 10px;
+}
+
+p,
+li {
+  line-height: 1.7;
+}
+
+ul,
+ol {
+  margin-left: 25px;
+}
+
+/* =========================
+   IMAGENS
+========================= */
+
+figure {
+  margin-top: 20px;
+}
+
+img {
+  width: 100%;
+
+  max-width: 500px;
+
+  border-radius: 10px;
+}
+
+figcaption {
+  margin-top: 10px;
+
+  font-size: 14px;
+}
+
+/* =========================
+   ASIDE
+========================= */
+
 aside {
   grid-area: aside;
-  background: #0b1220;
-  padding: 15px;
-}
 
-/* FOOTER */
-footer {
-  grid-area: footer;
-  text-align: center;
-  padding: 15px;
+  margin: 20px 20px 20px 0;
+
+  padding: 20px;
+
   background: #111827;
+
+  border-radius: 15px;
+
+  align-self: start;
 }
 
-/* FORM */
-input, select {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  border-radius: 6px;
+/* =========================
+   FORMULÁRIO
+========================= */
+
+form {
+  margin-top: 20px;
 }
+
+label {
+  display: block;
+
+  margin-bottom: 5px;
+}
+
+input,
+select {
+  width: 100%;
+
+  padding: 12px;
+
+  margin-bottom: 15px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #0f172a;
+
+  color: white;
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid #2563eb;
+}
+
+/* =========================
+   BOTÕES
+========================= */
 
 button {
-  padding: 10px;
+  padding: 12px 20px;
+
   border: none;
-  margin-top: 10px;
-  border-radius: 6px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  margin-right: 10px;
+
+  transition: 0.3s;
 }
 
-button[type="button"] {
+button:hover {
+  opacity: 0.9;
+}
+
+button:first-of-type {
   background: #2563eb;
+
   color: white;
 }
 
-button[type="reset"] {
+button:last-of-type {
   background: #ef4444;
+
   color: white;
 }
 
-/* RESPONSIVO */
-@media (max-width: 992px) {
-  body {
-    grid-template-columns: 200px 1fr;
-    grid-template-areas:
-      "header header"
-      "nav main"
-      "aside aside"
-      "footer footer";
-  }
+/* =========================
+   SAÍDA DOS DADOS
+========================= */
+
+#saida {
+  margin-top: 20px;
+
+  padding: 15px;
+
+  background: #0f172a;
+
+  border-radius: 10px;
 }
 
-@media (max-width: 767px) {
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  grid-area: footer;
+
+  background: #0b1220;
+
+  padding: 20px;
+
+  text-align: center;
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 768px) {
   body {
     grid-template-columns: 1fr;
+
+    grid-template-rows: auto;
+
     grid-template-areas:
       "header"
       "nav"
       "main"
       "aside"
       "footer";
+  }
+
+  main,
+  aside {
+    margin: 10px;
+  }
+
+  header {
+    font-size: 22px;
+
+    height: 70px;
+  }
+
+  .submenu {
+    position: static;
+
+    width: 100%;
   }
 }
