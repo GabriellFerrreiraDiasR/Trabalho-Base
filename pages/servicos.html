@@ -2,7 +2,11 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
+
     <title>Conteúdos</title>
+
+    <link rel="icon" type="image/x-icon" href="../anexos/logo.ico" />
+
     <link rel="stylesheet" href="../css/style.css" />
   </head>
 
@@ -10,18 +14,26 @@
     <header>Conteúdos de Estudo</header>
 
     <nav class="menu">
+      <figure class="logo">
+        <img src="../anexos/logo.png" alt="Logo" />
+
+        <figcaption>Programação</figcaption>
+      </figure>
+
       <ul>
         <li><a href="../index.html">Início</a></li>
 
         <li><a href="sobre.html">Sobre</a></li>
 
         <li class="dropdown">
-          <a href="#">Conteúdos ▾</a>
+          <a href="#"> Conteúdos ▾ </a>
 
           <ul class="submenu">
-            <li><a href="#html">HTML</a></li>
-            <li><a href="#css">CSS</a></li>
-            <li><a href="#js">JavaScript</a></li>
+            <li><a href="servicos.html#html">HTML</a></li>
+
+            <li><a href="servicos.html#css">CSS</a></li>
+
+            <li><a href="servicos.html#js">JavaScript</a></li>
           </ul>
         </li>
 
@@ -34,15 +46,47 @@
         <article>
           <h2>HTML</h2>
 
-          <p>HTML é responsável pela estrutura das páginas.</p>
+          <p>
+            HTML (HyperText Markup Language) é a linguagem responsável pela
+            estrutura das páginas web. Ela organiza textos, imagens, vídeos,
+            links e outros elementos.
+          </p>
+
+          <h3>Para que serve?</h3>
+
+          <ul>
+            <li>Criar páginas web</li>
+            <li>Organizar conteúdos</li>
+            <li>Adicionar formulários</li>
+            <li>Inserir imagens e vídeos</li>
+            <li>Criar links entre páginas</li>
+          </ul>
+
+          <h3>Principais tags</h3>
+
+          <ul>
+            <li>header → cabeçalho</li>
+            <li>nav → menu de navegação</li>
+            <li>main → conteúdo principal</li>
+            <li>section → seção</li>
+            <li>article → artigo</li>
+            <li>footer → rodapé</li>
+          </ul>
 
           <h3>Exemplo:</h3>
 
           <pre>
-&lt;h1&gt;Título&lt;/h1&gt;
-&lt;p&gt;Parágrafo&lt;/p&gt;
+&lt;h1&gt;Olá Mundo&lt;/h1&gt;
+
+&lt;p&gt;
+Meu primeiro site
+&lt;/p&gt;
 </pre
           >
+
+          <h3>Curiosidade</h3>
+
+          <p>HTML foi criado por Tim Berners-Lee em 1991.</p>
         </article>
       </section>
 
@@ -50,17 +94,55 @@
         <article>
           <h2>CSS</h2>
 
-          <p>CSS define aparência e layout.</p>
+          <p>
+            CSS (Cascading Style Sheets) é utilizado para estilizar páginas. Ele
+            controla cores, fontes, tamanhos e posicionamento.
+          </p>
+
+          <h3>Para que serve?</h3>
+
+          <ul>
+            <li>Alterar cores</li>
+            <li>Modificar fontes</li>
+            <li>Criar layouts</li>
+            <li>Fazer animações</li>
+            <li>Deixar páginas responsivas</li>
+          </ul>
+
+          <h3>Principais propriedades</h3>
+
+          <ul>
+            <li>color → muda cor do texto</li>
+
+            <li>background → altera fundo</li>
+
+            <li>font-size → tamanho do texto</li>
+
+            <li>margin → espaçamento externo</li>
+
+            <li>padding → espaçamento interno</li>
+
+            <li>border-radius → bordas arredondadas</li>
+          </ul>
 
           <h3>Exemplo:</h3>
 
           <pre>
 body{
+
 background:black;
+
 color:white;
+
+font-size:20px;
+
 }
 </pre
           >
+
+          <h3>Curiosidade</h3>
+
+          <p>CSS surgiu em 1996 para separar estilo da estrutura HTML.</p>
         </article>
       </section>
 
@@ -68,14 +150,57 @@ color:white;
         <article>
           <h2>JavaScript</h2>
 
-          <p>JavaScript adiciona interatividade.</p>
+          <p>
+            JavaScript é uma linguagem de programação usada para adicionar
+            interatividade aos sites.
+          </p>
+
+          <h3>O que ele pode fazer?</h3>
+
+          <ul>
+            <li>Criar menus interativos</li>
+
+            <li>Validar formulários</li>
+
+            <li>Modificar elementos da página</li>
+
+            <li>Criar jogos</li>
+
+            <li>Consumir APIs</li>
+
+            <li>Criar animações</li>
+          </ul>
+
+          <h3>Conceitos básicos</h3>
+
+          <ul>
+            <li>Variáveis</li>
+
+            <li>Funções</li>
+
+            <li>Condições (if)</li>
+
+            <li>Laços (for e while)</li>
+
+            <li>Eventos</li>
+          </ul>
 
           <h3>Exemplo:</h3>
 
           <pre>
-alert("Olá Mundo")
+let nome = "João";
+
+alert(
+"Olá " + nome
+);
 </pre
           >
+
+          <h3>Curiosidade</h3>
+
+          <p>
+            JavaScript foi criado em apenas 10 dias por Brendan Eich em 1995.
+          </p>
         </article>
       </section>
     </main>
@@ -87,7 +212,7 @@ alert("Olá Mundo")
     </aside>
 
     <footer>
-      <p>Desenvolvido por Você - 2026</p>
+      <p>Copyright © 2026 Guia de Programação. Todos os direitos reservados.</p>
     </footer>
   </body>
 </html>
